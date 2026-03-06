@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newfilm-hd - Кинотрейлеры</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="#home" class="logo-link">newfilm-hd</a></h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home">Главная</a>
+                <a href="#movies" class="nav-link" data-page="home">Фильмы</a>
+                <a href="#trending" class="nav-link" data-page="home">По времени</a>
+            </nav>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Поиск...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-nav-link" data-page="home">Главная</a>
+        <a href="#movies" class="mobile-nav-link" data-page="home">Фильмы</a>
+        <a href="#trending" class="mobile-nav-link" data-page="home">По времени</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <div id="homePage" class="page">
+            <div class="container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Жанры</h3>
+                        <div class="category-list">
+                            <label class="category-item">
+                                <input type="checkbox" value="thriller" class="genre-filter">
+                                <span>Триллеры</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="sports" class="genre-filter">
+                                <span>Спортивные</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="drama" class="genre-filter">
+                                <span>Драмы</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="biography" class="genre-filter">
+                                <span>Биография</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="melodrama" class="genre-filter">
+                                <span>Мелодрамы</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="crime" class="genre-filter">
+                                <span>Криминал</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="comedy" class="genre-filter">
+                                <span>Комедии</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="documentary" class="genre-filter">
+                                <span>Документальные</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="action" class="genre-filter">
+                                <span>Боевики</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="horror" class="genre-filter">
+                                <span>Ужасы</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="adventure" class="genre-filter">
+                                <span>Приключения</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="family" class="genre-filter">
+                                <span>Семейные</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="fantasy" class="genre-filter">
+                                <span>Фэнтези</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="short" class="genre-filter">
+                                <span>Короткометражные</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="detective" class="genre-filter">
+                                <span>Детективы</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="scifi" class="genre-filter">
+                                <span>Фантастика</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="war" class="genre-filter">
+                                <span>Военные</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="history" class="genre-filter">
+                                <span>История</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="western" class="genre-filter">
+                                <span>Вестерны</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="comics" class="genre-filter">
+                                <span>Комиксы</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Язык</h3>
+                        <div class="category-list">
+                            <label class="category-item">
+                                <input type="checkbox" value="uk" class="language-filter">
+                                <span>Украинский</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="ru" class="language-filter">
+                                <span>Русский</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="en" class="language-filter">
+                                <span>Английский</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Страна</h3>
+                        <div class="category-list">
+                            <label class="category-item">
+                                <input type="checkbox" value="ua" class="country-filter">
+                                <span>Украина</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="ru" class="country-filter">
+                                <span>Россия</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="us" class="country-filter">
+                                <span>США</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="uk" class="country-filter">
+                                <span>Великобритания</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="fr" class="country-filter">
+                                <span>Франция</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="de" class="country-filter">
+                                <span>Германия</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="jp" class="country-filter">
+                                <span>Япония</span>
+                            </label>
+                            <label class="category-item">
+                                <input type="checkbox" value="kr" class="country-filter">
+                                <span>Южная Корея</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="content-section">
+                        <h2 class="section-title">Новые фильмы</h2>
+                        <div class="movies-grid" id="moviesGrid"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Page -->
+        <div id="detailPage" class="page" style="display: none;">
+            <div class="detail-container">
+                <!-- Hero Section with Video -->
+                <div class="detail-hero">
+                    <button class="back-button" id="backBtn"><i class="fas fa-arrow-left"></i></button>
+                    <div class="video-container">
+                        <iframe id="detailVideo" class="detail-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="detail-info">
+                    <div class="detail-content">
+                        <h1 id="detailTitle" class="detail-title"></h1>
+                        
+                        <div class="detail-meta">
+                            <span class="rating"><i class="fas fa-star"></i> <span id="detailRating">8.5</span>/10</span>
+                            <span class="views"><i class="fas fa-eye"></i> <span id="detailViews">0</span> просмотров</span>
+                            <span class="year" id="detailYear"></span>
+                        </div>
+
+                        <div class="detail-genres" id="detailGenresList"></div>
+
+                        <div class="detail-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Страна:</span>
+                                <span class="info-value" id="detailCountry"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Язык:</span>
+                                <span class="info-value" id="detailLanguage"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-description">
+                            <p id="detailDescription"></p>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h3>Похожие фильмы</h3>
+                        <div class="movies-grid" id="recommendationsGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>newfilm-hd</h3>
+                    <p>Ваш источник лучших кинотрейлеров</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#questions">Питання</a>
+                    <span class="separator">|</span>
+                    <a href="#privacy">Політика конфіденційності</a>
+                    <span class="separator">|</span>
+                    <a href="#contacts">Контакти</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#facebook" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#twitter" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#instagram" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#youtube" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 newfilm-hd. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
